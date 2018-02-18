@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm">asdasdsda
+    </div>
+    <div class="col-sm">
+      <form [formGroup]="loginForm" class="loginForm" novalidate (submit)="loginUser()">
+        <h1>Welcome!</h1>
+        <p>Sign in to your account</p>
+        <mat-form-field class="example-full-width">
+          <input type="text" matInput required name="userName" formControlName="userName" placeholder="UserName">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <input type="password" required matInput name="password" formControlName="password" placeholder="Password">
+        </mat-form-field>
+        <div>
+          <button mat-raised-button color="primary">Login</button>
+          <button class="registerbtn" mat-raised-button color="danger" [routerLink]="['/register']">Register</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
